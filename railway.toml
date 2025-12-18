@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "php artisan migrate --force && php -S 0.0.0.0:$PORT public/index.php"
+
+[[services]]
+type = "postgresql"
+plan = "starter"
